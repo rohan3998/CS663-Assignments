@@ -1,0 +1,9 @@
+function[RMSD]=myRMSD(A,B)
+A=im2double(A);
+B=im2double(B);
+diff=A-B;
+diff=diff.^2;
+n=numel(diff);
+diffsum=sum(sum(diff));
+RMSD=sqrt(diffsum/n);
+end
